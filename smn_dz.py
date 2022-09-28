@@ -40,10 +40,16 @@
 #             count += 1
 #     return count
 
+for i in range(4):
+    res = 0
+    num = str(input('1. Введите число: '))
+    for i in num:
+        if i.isdigit():
+            res += int(i)
+    print('Сумма цифр в числе', num, '=', res)
 
-res = 0
-num = str(input('1. Введите число: '))
-for i in num:
-    if i.isdigit():
-        res += int(i)
-print('Сумма цифр в числе', num, '=', res)
+res = 1
+num = int(input('2. Введите число: '))
+for i in range(1, num+1):
+    res *= i
+    print(res)
