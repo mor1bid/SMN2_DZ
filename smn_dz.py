@@ -41,12 +41,9 @@
 #     return count
 
 
-dig = 0
 res = 0
 num = str(input('1. Введите число: '))
 for i in num:
-    # while dig<len(num):
-        if i.isdigit():
-            res += int(num[dig])
-        dig+=1
+    if i.isdigit():
+        res += int(i)
 print('Сумма цифр в числе', num, '=', res)
