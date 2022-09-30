@@ -50,3 +50,18 @@ if a<N*2 and b<N*2:
     print('Произведение элементов списка на позициях', a, 'и', b, '=', res)
 else:
     print('Задано неверное значение позиций!') 
+
+# Задание 5 Реализуйте алгоритм перемешивания списка.
+
+# for i in range(4):
+import random
+N = int(input('5. Введите значение границ списка: '))
+List = []
+for i in range(-N, N):
+    List.append(i)
+print(List, '\n Перемешанный: ')
+ListR = []
+for i in List:
+    rndi = random.uniform(-N, N)
+    List[i] = List[int(rndi)]
+print(List)
