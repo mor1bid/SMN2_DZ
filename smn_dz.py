@@ -54,7 +54,6 @@
 # Задание 5 Реализуйте алгоритм перемешивания списка.
 
 # for i in range(4):
-import random
 N = int(input('5. Введите значение границ списка: '))
 List = []
 ListR = []
@@ -63,6 +62,8 @@ for i in range(-N, N):
     ListR.append(i)
 print(List, '\n Перемешанный: ')
 for i in List:
-    # rndi = random.uniform(0, N*2)
-    List[i] = ListR[i+1]
+    if i%2 == 0 or i == 0:
+        List[i] = ListR[i+1]
+    else:
+        List[i] = ListR[i-1]
 print(List)
